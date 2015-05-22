@@ -24,11 +24,11 @@ function ready() {
             var elle = "";
             if (courses.length <= 6) {
                 for (var i = 0; i < courses.length; i++) {
-                    elle += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"'>vai al corso</a>";
+                    elle += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"&from=cat'>vai al corso</a>";
                 }
             } else {
                 for (var i = 0; i < 6; i++) {
-                    elle += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"'>vai al corso</a>";
+                    elle += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"&from=cat'>vai al corso</a>";
                 }
             }
             $("#content").hide().html(elle).slideDown(1000);
@@ -51,11 +51,11 @@ function ready() {
             {
                 if (courses.length <= 6) {
                     for (var i = 0; i < courses.length; i++) {
-                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"'>vai al corso</a>";
+                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"&from=cat'>vai al corso</a>";
                     }
                 } else {
                     for (var i = 0; i < 6; i++) {
-                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"'>vai al corso</a>";
+                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"&from=cat'>vai al corso</a>";
                     }
                 }
                 $("#content").hide().html(el).slideDown(1000);
@@ -65,11 +65,11 @@ function ready() {
             {
                 if (courses.length <= 12) {
                     for (var i = 6; i < courses.length; i++) {
-                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"'>vai al corso</a>";
+                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"&from=cat'>vai al corso</a>";
                     }
                 } else {
                     for (var i = 6; i < 12; i++) {
-                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"'>vai al corso</a>";
+                        el += "<div class='course' id='" + courses[i].id + "'><h2>" + courses[i].name + "</h2><h4>" + courses[i].level + "</h2><span>" + courses[i].description + "</span></div><a href='corso.html?id="+courses[i].id+"&from=cat'>vai al corso</a>";
                     }
                 }
                 $("#content").hide().html(el).slideDown(1000);
