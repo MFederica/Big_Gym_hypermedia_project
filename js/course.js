@@ -24,16 +24,17 @@ function ready() {
             success: function (response) {
                 console.log(JSON.parse(response));
                 course = JSON.parse(response);
-                $(".contiene").html("<div class='course' id='c" + course[0].id + "'><h2>" + course[0].name + "</h2><h4>" + course[0].level + "</h2></div>");
+                $(".contiene").html("<div class='course' id='" + course[0].id + "'><h2>" + course[0].name + "</h2><h4>" + course[0].level + "</h2></div>");
+                $(".contiene").html("<div class='course' id='" + course[0].id + "'><h2>" + course[0].name + "</h2><h4>" + course[0].level + "</h2></div>");
 
-                $("#pannello-1 .panel-body").text(course[0].whoI);
+                $("#pannello-1 .panel-body").text(course[0].whoi);
                 $("#pannello-2 .panel-body").text(course[0].what);
-                $("#pannello-3 .panel-body").text(course[0].whoP);
+                $("#pannello-3 .panel-body").text(course[0].whop);
                 $("#pannello-4 .panel-body").text(course[0].why);
 
                 $(".first-slide").attr("src", "img/" + course[0].img1 + ".jpg");
                 $(".second-slide").attr("src", "img/" + course[0].img2 + ".jpg");
-                var schedule = course[0].schedule.split('/');
+                var schedule = course[0].schedule.split('|');
                 for (var i = 0; i < schedule.length; i++) {
                     $('#g' + i).text(schedule[i]);
                 }
@@ -50,16 +51,16 @@ function ready() {
                 if (pn == 0) {
 
                 } else {
-                    $("#prev").attr("href", "corso.html?id=" + storedCourses[+pn - +1].id + "&from=" + from);
+                    $("#prev").attr("href", "course.html?id=" + storedCourses[+pn - +1].id + "&from=" + from);
                 }
 
                 if (pn == +storedCourses.length - +1) {
 
                 } else {
-                    $("#next").attr("href", "corso.html?id=" + storedCourses[+pn + +1].id + "&from=" + from);
+                    $("#next").attr("href", "course.html?id=" + storedCourses[+pn + +1].id + "&from=" + from);
                 }
                 $("#back").text("back to " + course[0].category);
-                $("#back").attr("href", "corsi.html?cat=" + course[0].category);
+                $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
 
 
             },
