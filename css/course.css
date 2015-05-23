@@ -1,0 +1,26 @@
+.panel-primary>.panel-heading {
+    background-color: #1e90ff;
+    border-color: black;
+}
+
+.panel-primary>.panel-heading:hover {
+    background-color: #FA6400;
+    border-color: black;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #FA6400;
+}
+
+body {
+    background-color: #FA6400;
+}
+
+.container {
+    background-color: white;
+}
+
+.header-portfolio {
+    background-color: #FA6400;
+}
