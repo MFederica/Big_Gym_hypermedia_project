@@ -17,7 +17,7 @@ function ready() {
             cat: cat
         },
         crossDomain: true,
-        url: "php/getCourseCat.php",
+        url: "http://biggympolimi.altervista.org/getCourseCat.php",
         success: function (response) {
             console.log(JSON.parse(response));
             courses = JSON.parse(response);

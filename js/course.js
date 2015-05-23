@@ -24,7 +24,7 @@ function ready() {
                 corso: id
             },
             crossDomain: true,
-            url: "php/getCourse.php",
+            url: "http://biggympolimi.altervista.org/getCourse.php",
             success: function (response) {
                 //chiamata ajax ha avuto successo allora carico tutto quello che c'è da caricare nella pagina
                 console.log(JSON.parse(response));
