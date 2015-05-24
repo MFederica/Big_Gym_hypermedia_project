@@ -8,7 +8,7 @@ function ready() {
     cat = getQueryVariable("cat");
     console.log("cat = " + cat);
     //setta ad attivo la categoria per evidenziarla nell'html--->aggiunge la classe active alla classe cat
-    $('#' + cat).toggleClass('active');
+    $('#' + cat).parent().attr("class", "active");
     //chiamata ajax per recuperare i corsi da visualizzare
     $.ajax({
         method: "POST",
@@ -126,9 +126,10 @@ function ready() {
         return (false);
     }
 
+    $("#collapsecat").text(cat);
 
     function addElement(elements, i) {
-        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id="+courses[i].id+"&from=cat' class='thumbnail'><img class='responsive' src='img/" + courses[i].img1 + ".jpg'></img></a></p><p>" + courses[i].description + "</p></div></div>";
+        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from=cat' class='thumbnail'><img class='responsive' src='img/" + courses[i].img1 + ".jpg'></img></a></p><p>" + courses[i].description + "</p></div></div>";
         return (elements);
     }
 }

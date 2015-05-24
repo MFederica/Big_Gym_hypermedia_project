@@ -13,4 +13,32 @@
     background-color: #FA6400;
 }
 
+.modal-header {
+    background-color: #FA6400;
+}
 
+.input-group-addon:first-child {
+    background-color: #1e90ff;
+}
+
+#myCarousel {
+    margin-bottom: 10px;
+}
+
+#send{
+    background-color: #1e90ff;
+}
+
+#ourcourse{
+    background-color: #1e90ff;
+}
+
+
+a {
+    color: #fa6900;
+    text-decoration: none;
+}
+
+a {
+    background-color: transparent;
+}

@@ -29,16 +29,15 @@ function ready() {
             //chiamata ajax ha avuto successo allora carico tutto quello che c'è da caricare nella pagina
             console.log(JSON.parse(response));
             course = JSON.parse(response);
-            $(".contiene").html("<div class='course' id='" + course[0].id + "'><h2>" + course[0].name + "</h2><h4>" + course[0].level + "</h2></div>");
-            $(".contiene").html("<div class='course' id='" + course[0].id + "'><h2>" + course[0].name + "</h2><h4>" + course[0].level + "</h2></div>");
-
+            //setto l'accordion
             $("#pannello-1 .panel-body").text(course[0].whoi);
             $("#pannello-2 .panel-body").text(course[0].what);
             $("#pannello-3 .panel-body").text(course[0].whos);
             $("#pannello-4 .panel-body").text(course[0].why);
-
+            //setto le immagini per ora due
             $(".first-slide").attr("src", "img/" + course[0].img1 + ".jpg");
             $(".second-slide").attr("src", "img/" + course[0].img2 + ".jpg");
+            //setto le schedule
             var schedule = course[0].schedule.split('|');
             for (var i = 0; i < schedule.length; i++) {
                 $('#g' + i).text(schedule[i]);
@@ -50,21 +49,19 @@ function ready() {
                     pn = i;
                     break;
                 }
-
             }
             //setto parte alta di info
             $("#namecourse").text(course[0].name + " - " + course[0].level);
             $("#categorycourse").text(course[0].category);
-
-
             //setto next prev e turn back
             if (pn == 0) {
-
+                $("#prev").parent().attr("class", "disabled");
             } else {
                 $("#prev").attr("href", "course.html?id=" + storedCourses[+pn - +1].id + "&from=" + from);
             }
 
             if (pn == +storedCourses.length - +1) {
+                $("#next").parent().attr("class", "disabled");
 
             } else {
                 $("#next").attr("href", "course.html?id=" + storedCourses[+pn + +1].id + "&from=" + from);
@@ -77,9 +74,10 @@ function ready() {
                 $("#back").text("back to " + course[0].category);
                 $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
             } else {
+                //TODO CON PARAMETRI FEDE
                 $("#info").text(from +" courses");
                 $("#back").text("back to " + from);
-                $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
+                $("#back").attr("href","");
             }
 
 
