@@ -54,7 +54,8 @@ function ready() {
             }
             //setto parte alta di info
             $("#namecourse").text(course[0].name + " - " + course[0].level);
-            
+            $("#categorycourse").text(course[0].category);
+
 
             //setto next prev e turn back
             if (pn == 0) {
