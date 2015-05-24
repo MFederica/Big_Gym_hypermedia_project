@@ -1,0 +1,126 @@
+html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="img/logo.jpg">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<!--INIZIA LA NAVBAR-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" id="navcontainer">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="glyphicon glyphicon-circle-arrow-down" style="color:##0e5180"></span>
+            </button>
+            <a href="#" id="brand"><img src="img/logo.jpg" id="logo"></img>
+            </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="about">About us <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">The gym</a>
+                        </li>
+                        <li><a href="#">Equipment</a>
+                        </li>
+                        <li><a href="#">Contact info</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="courses">Courses<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Schedule</a>
+                        </li>
+                        <li><a href="#">Our courses</a>
+                        </li>
+                        <li><a href="#">Categories</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="instructors">Instructors <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Our instructors</a>
+                        </li>
+                        <li><a href="#">Monthly award</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#" id="rooms">Rooms</a>
+                </li>
+                <li><a href="#about" id="join">Join us</a>
+                </li>
+                <li><a href="#contact" id="testimonials">Testimonials</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--FINE NAVBAR-->
+
+<!--TITOLO-->
+<div class="container top">
+    <div class="row">
+        <div class="col-sm-10">
+            <h2 class="text-color">OUR COURSES</h2>
+        </div>
+    </div>
+</div>
+<!--FINE TITOLO-->
+
+
+<!--Comincio a dividere la pagina in 2 colonne-->
+<div class="container divisor">
+    <div class="row">
+        <div class="col-sm-2" id="radius">
+            <div class="to-left span3 bs-docs-sidebar">
+                <h3>Filter by level</h3>
+                <ul class="nav nav-pills nav-stacked" id="sidebar">
+                    <li>
+                        <a href="allcourses.html?lev=basic" class="level" id="basic"><i class="icon-chevron-right"></i>Basic</a>
+                    </li>
+                    <li>
+                        <a href="allcourses.html?lev=medium" class="level" id="medium"><i class="icon-chevron-right"></i>Medium</a>
+                    </li>
+                    <li>
+                        <a href="allcourses.html?lev=advanced" class="level" id="advanced"><i class="icon-chevron-right"></i>Advanced</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--FIne DeLLA PARTE SINISTRA-->
+        
+        <!--PARTE DESTRA DINAMICA-->
+        <div class="col-sm-10" id="to-right">
+            <div class="row" id="courses-to-add">
+    <!--QUI SI CARICANO I CORSI DA DB come col-3-->
+            </div>
+    <!--FINE PARTE 3-->
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/allcourses.js"></script>
+</body>
+
+</html>
