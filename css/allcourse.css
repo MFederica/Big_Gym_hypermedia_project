@@ -18,34 +18,6 @@
 }
 
 
-.nav-pills.nav-stacked > li > a {
-  margin-bottom: 3px;
-}
-
-.nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
-  color: #fa6900;
-  background-color: #0e5180;
-}
-
-
-.nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-}
-
-.nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
-  color: #ffffff;
-  background-color: #0088cc;
-}
-a {
-    color: #fa6900;
-    text-decoration: none;
-}
-a {
-    background-color: transparent;
-}
-
 @media (min-width:979px) {
   #to-right{
     border-left: 1px solid #fa6900;

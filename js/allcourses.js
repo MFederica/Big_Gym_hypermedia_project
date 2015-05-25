@@ -8,6 +8,7 @@ function ready() {
     lev = getQueryVariable("lev");
     console.log("lev = " + lev);
     //setta ad attivo la categoria per evidenziarla nell'html--->aggiunge la classe active alla classe lev
+
     $('#' + lev).parent().attr("class", "active");
     //Recupero i corsi
     $.ajax({
@@ -133,7 +134,7 @@ function ready() {
     $("#collapselevel").text(lev);
 
     function addElement(elements, i) {
-        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='" + courses[i].id + ".html' class='thumbnail'><img class='responsive' src='img/" + courses[i].img1 + "</img></a></p><p>" + courses[i].description + "</p></div></div>"; //Occhio URL immagini da cambiare
+        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='" + courses[i].id + ".html' class='thumbnail'><img class='responsive' src='img/" + courses[i].img1 + "'</img></a></p><p>" + courses[i].description + "</p></div></div>"; //Occhio URL immagini da cambiare
         return (elements);
     }
 }
