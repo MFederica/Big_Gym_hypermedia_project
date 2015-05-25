@@ -2,7 +2,7 @@
 
 
     $lev = $_POST['lev'];
-    $mysqli = new mysqli("localhost", "root", "", "prova");
+    $mysqli = new mysqli("localhost", "biggympolimi", "", "my_biggympolimi");
     if (mysqli_connect_errno()) { 
         echo "Error to connect to DBMS: ".mysqli_connect_error(); 
         exit(); 
