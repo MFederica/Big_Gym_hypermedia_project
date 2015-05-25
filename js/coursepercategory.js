@@ -8,7 +8,7 @@ function ready() {
     cat = getQueryVariable("cat");
     console.log("cat = " + cat);
     //setta ad attivo la categoria per evidenziarla nell'html--->aggiunge la classe active alla classe cat
-    $('#' + cat).parent().attr("class", "active");
+    console.log( $('#' + cat).parent());
     //chiamata ajax per recuperare i corsi da visualizzare
     $.ajax({
         method: "POST",
@@ -113,6 +113,26 @@ function ready() {
         }
     });
 
+    //chiamata ajax per recuperare tutte le categorie MANCA LA TABELLA NEL DB
+    $.ajax({
+        method: "POST",
+        crossDomain: true,
+        url: "http://biggympolimi.altervista.org/php/getCategories.php",
+        success: function (response) {
+            console.log(JSON.parse(response));
+            var categories = JSON.parse(response);
+            var lc = "";
+            for (var i = 0; i < categories.length; i++) {
+                lc += "<li><a href='coursepercategory.html?cat="+categories[i].name+" ' class='category' id='"+categories[i].name+"'>"+categories[i].name+"</a></li>";
+            }
+            $("#listacategory").html(lc);
+            $('#' + cat).parent().attr("class", "active");
+        },
+        error: function (request, error) {
+            console.log("Error");
+        }
+    });
+
     //funzione per recuperare i parametri dell'url
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
@@ -126,8 +146,10 @@ function ready() {
         return (false);
     }
 
+    //titolo dinamico quando la sidenav è collassata
     $("#collapsecat").text(cat);
 
+    //funzione che mi aggiunge elementi a una stringa
     function addElement(elements, i) {
         elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from=cat' class='thumbnail'><img class='responsive' src='img/" + courses[i].img1 + ".jpg'></img></a></p><p>" + courses[i].description + "</p></div></div>";
         return (elements);

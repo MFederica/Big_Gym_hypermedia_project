@@ -1,33 +1,8 @@
-.category {
-    color: black;
-}
+/**posizione titolo pagina**/
 
-.container .intro {
-    margin-top: 60px;
-}
-
-.nav-pills.nav-stacked > li > a {
-    margin-bottom: 3px;
-}
-
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,
-.nav-pills > .active > a:focus {
-    color: #fa6900;
-    background-color: #0e5180;
-}
-
-.nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-}
-
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,
-.nav-pills > .active > a:focus {
-    color: #ffffff;
-    background-color: #0088cc;
+.top {
+    margin-left: 0px;
+    margin-top: 50px;
 }
 
 a {
@@ -39,6 +14,15 @@ a {
     background-color: transparent;
 }
 
+.category {
+    color: black;
+}
+
+.container .intro {
+    margin-top: 60px;
+}
+/**stile deol box del corso**/
+
 .well {
     min-height: 250px;
     padding: 19px;
@@ -49,13 +33,27 @@ a {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
 }
+/**inizio stile del paginator**/
 
-.top {
-    margin-left: 0px;
-    margin-top: 50px;
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
 }
-/* make sidebar nav vertical */
 
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    background-color: #fa6400;
+}
+/**fine stile paginator**/
+
+/**sidebar diventa verticale**/
 @media (min-width: 768px) {
     .sidebar-nav .navbar .navbar-collapse {
         padding: 0;
@@ -76,3 +74,4 @@ a {
         padding-bottom: 12px;
     }
 }
+/**non mi ricordo se servono e cosa sono controllare**/

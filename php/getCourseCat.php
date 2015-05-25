@@ -7,7 +7,7 @@
         echo "Error to connect to DBMS: ".mysqli_connect_error(); 
         exit(); 
     }else{
-        $query = " SELECT id,name,level,description,img1 FROM course WHERE course.category ='$cat' ORDER BY course.name,course.level";
+        $query = " SELECT id,name,level,description,img1 FROM course WHERE course.category ='$cat' ORDER BY course.name,course.levelnumber";
         
         $result = $mysqli->query($query);
         if($result->num_rows >0)

@@ -14,8 +14,6 @@ function ready() {
     id = getQueryVariable("id");
     console.log("corsi da navigare " + storedCourses);
     console.log("corso = " + id + " primo corso = " + storedCourses[0].id + " numero di corsi " + storedCourses.length + "from " + from);
-
-
     //chiamata ajax per recuperare le informazioni dal data base
     $.ajax({
         method: "POST",
@@ -37,6 +35,8 @@ function ready() {
             //setto le immagini per ora due
             $(".first-slide").attr("src", "img/" + course[0].img1 + ".jpg");
             $(".second-slide").attr("src", "img/" + course[0].img2 + ".jpg");
+            //setto la room
+            $("#room").html("<h2>Room: <a href='#'  id='room'>"+course[0].room+"</a></h2>");
             //setto le schedule
             var schedule = course[0].schedule.split('|');
             for (var i = 0; i < schedule.length; i++) {
@@ -70,14 +70,14 @@ function ready() {
 
 
             if (from == "cat") {
-                $("#info").text(course[0].category +" courses");
+                $("#info").text(course[0].category.toUpperCase() + " COURSES");
                 $("#back").text("back to " + course[0].category);
                 $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
             } else {
                 //TODO CON PARAMETRI FEDE
-                $("#info").text(from +" courses");
+                $("#info").text(from + " courses");
                 $("#back").text("back to " + from);
-                $("#back").attr("href","");
+                $("#back").attr("href", "");
             }
 
 
@@ -87,9 +87,18 @@ function ready() {
             console.log("Error");
         }
     });
+    //codice per il popover
+    //tooltip è una funzione usata per attivare cose in popover
+    $("[rel='tooltip']").tooltip();
 
-
-
+    $('.thumbnail').hover(
+        function () {
+            $(this).find('.caption').slideDown(250); //.fadeIn(250)
+        },
+        function () {
+            $(this).find('.caption').slideUp(250); //.fadeOut(205)
+        }
+    );
 
     //funzione per recuperare i parametri dall'url
     function getQueryVariable(variable) {
