@@ -10,7 +10,13 @@
     <link rel="icon" href="img/logo.jpg">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js" S></script>
+    <script src="js/index.js"></script>
+
 </head>
 
 <!--INIZIA LA NAVBAR-->
@@ -44,7 +50,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Schedule</a>
                         </li>
-                        <li><a href="#">Our courses</a>
+                        <li><a href="allcourses.html?lev=all">Our courses</a>
                         </li>
                         <li><a href="#">Categories</a>
                         </li>
@@ -72,30 +78,144 @@
 </nav>
 <!--FINE NAVBAR-->
 
-<!--TITOLO-->
-<div class="container top">
+<!-- Carousel
+    ================================================== -->
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+            <div class="carousel-caption">
+                <h2>Caption 1</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+            <div class="carousel-caption">
+                <h2>Caption 2</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+            <div class="carousel-caption">
+                <h2>Caption 3</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
+
+
+<!-- FINE CAROUSEL -->
+
+<div class="container" id="categorie">
+
     <div class="row">
-        <div class="col-sm-10">
-            <h2 class="text-color">HOME</h2>
+
+
+        <div class="col-md-4 col-xs-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>AQUA</h4>
+                    <p><a href="" class="label label-danger" rel="tooltip" title="GO!">Detail</a>
+                        <a href="" class="label label-default" rel="tooltip" title="GO!">Courses</a>
+                    </p>
+                </div>
+                <img src="img/aqua.jpg" alt="...">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>COMBAT</h4>
+                    <p><a href="" class="label label-danger" rel="tooltip" title="GO!">Detail</a>
+                        <a href="coursepercategory.html?cat=combat" class="label label-default" rel="tooltip" title="GO!">Courses</a>
+                    </p>
+                </div>
+                <img src="img/combattt.jpg" alt="...">
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>DANCE</h4>
+                    <p><a href="" class="label label-danger" rel="tooltip" title="GO!">Detail</a>
+                        <a href="coursepercategory.html?cat=dance" class="label label-default" rel="tooltip" title="GO!">Courses</a>
+                    </p>
+                </div>
+                <img src="img/dancee.jpg" alt="...">
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-md-4 col-xs-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>EXPERIMENTAL</h4>
+                    <p><a href="" class="label label-danger" rel="tooltip" title="GO!">Detail</a>
+                        <a href="" class="label label-default" rel="tooltip" title="GO!">Courses</a>
+                    </p>
+                </div>
+                <img src="img/experimentl.jpg" alt="...">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>HEALTH</h4>
+                    <p><a href="" class="label label-danger" rel="tooltip" title="GO!">Detail</a>
+                        <a href="coursepercategory.html?cat=health" class="label label-default" rel="tooltip" title="GO!">Courses</a>
+                    </p>
+                </div>
+                <img src="img/health.jpg" alt="...">
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>ORIENTAL</h4>
+                    <p><a href="" class="label label-danger" rel="tooltip" title="GO!">Detail</a>
+                        <a href="" class="label label-default" rel="tooltip" title="GO!">Courses</a>
+                    </p>
+                </div>
+                <img src="img/oriental.jpg" alt="...">
+            </div>
         </div>
     </div>
 </div>
+<!-- /.container -->
 
-<div class="container">
-    <ul>
-        <li>
-            <a href="coursepercategory.html?cat=dance">tutti i corsi dance</a>
-        </li>
-        <li>
-            <a href="coursepercategory.html?cat=health">tutti i corsi health</a>
-        </li>
-        <li>
-            <a href="coursepercategory.html?cat=combat">tutti i corsi combat</a>
-        </li>
-    </ul>
-</div>
-<!--FINE TITOLO-->
 
+
+
+<!-- FOOTER -->
+<footer>
+    <p class="pull-right"><a href="#">Back to top</a>
+    </p>
+    <p>&copy; 20 14 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+    </p>
+</footer>
 
 <!--Comincio a dividere la pagina in 2 colonne-->
 
@@ -104,8 +224,7 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

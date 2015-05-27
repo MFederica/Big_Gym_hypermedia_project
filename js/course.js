@@ -33,10 +33,10 @@ function ready() {
             $("#pannello-3 .panel-body").text(course[0].whos);
             $("#pannello-4 .panel-body").text(course[0].why);
             //setto le immagini per ora due
-            $(".first-slide").attr("src", "img/" + course[0].img1 + ".jpg");
-            $(".second-slide").attr("src", "img/" + course[0].img2 + ".jpg");
+            $(".first-slide").attr("src", "img/" + course[0].img1);
+            $(".second-slide").attr("src", "img/" + course[0].img2);
             //setto la room
-            $("#room").html("<h2>Room: <a href='#'  id='room'>"+course[0].room+"</a></h2>");
+            $("#room").html("<h2>Room: <a href='#'  id='roomlink'>"+course[0].room+"</a></h2>");
             //setto le schedule
             var schedule = course[0].schedule.split('|');
             for (var i = 0; i < schedule.length; i++) {
@@ -75,9 +75,9 @@ function ready() {
                 $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
             } else {
                 //TODO CON PARAMETRI FEDE
-                $("#info").text(from + " courses");
+                $("#info").text(from.toLocaleUpperCase() + " COURSES");
                 $("#back").text("back to " + from);
-                $("#back").attr("href", "");
+                $("#back").attr("href", "allcourses.html?lev="+from);
             }
 
 

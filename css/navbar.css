@@ -1,112 +1,128 @@
-
-<!--inizio CSS navbar-->
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #0e5180;
-  
+<!--inizio CSS navbar--> .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #0e5180;
 }
-
 
 .navbar-default .navbar-text {
-  color: #1f2747;
+    color: #1f2747;
 }
+
 .navbar-default .navbar-nav > li > a {
-  color: #1f2747;
-  min-height: 60px; 
-  padding-top: 20px;
+    color: #1f2747;
+    min-height: 60px;
+    padding-top: 20px;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #0e5180;
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #0e5180;
 }
+
 .navbar-default .navbar-nav > li > .dropdown-menu {
-  background-color: #fa6900;
+    background-color: #fa6900;
 }
+
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
-  color: #1f2747;
-  
+    color: #1f2747;
 }
+
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-  color: #0e5180;
-  background-color: #f38630;
-     
+    color: #0e5180;
+    background-color: #f38630;
 }
+
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-  background-color: #fa6900;
+    background-color: #fa6900;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #0e5180;
-  background-color: #f38630;
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #0e5180;
+    background-color: #f38630;
 }
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #0e5180;
-  background-color: #f38630;
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #0e5180;
+    background-color: #f38630;
 }
+
 .navbar-default .navbar-toggle {
-  border-color: #f38630;
+    border-color: #f38630;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #f38630;
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #f38630;
 }
+
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #1f2747;
-  margin-bottom: 5px; 
+    background-color: #1f2747;
+    margin-bottom: 5px;
 }
+
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #1f2747;
+    border-color: #1f2747;
 }
+
 .navbar-default .navbar-link {
-  color: #1f2747;
+    color: #1f2747;
 }
+
 .navbar-default .navbar-link:hover {
-  color: #0e5180;
+    color: #0e5180;
 }
 
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #1f2747;
-    min-height: 60px;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #0e5180;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #0e5180;
-    background-color: #f38630;
-  }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #1f2747;
+        min-height: 60px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #0e5180;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #0e5180;
+        background-color: #f38630;
+    }
 }
+
 .navbar-fixed-top {
-  background-color: #fa6900;
-  border-color: #f38630;
-  max-height: 60px;
+    background-color: #fa6900;
+    border-color: #f38630;
+    max-height: 60px;
 }
 
 #navbar {
-  background-color: #fa6900;
-  border-color: #f38630;
+    background-color: #fa6900;
+    border-color: #f38630;
 }
 
 .navbar-header {
-
     max-height: 60px;
 }
+
 #navcontainer {
-
     max-height: 60px;
 }
 
- .navbar-toggle {
+.navbar-toggle {
     position: relative;
     top: auto;
     left: auto;
-  }
+}
 
 #logo {
-
     height: 60px;
     width: 60px;
     padding-left: 0px;
 }
-<!--Fine CSS navbar-->
 
+<!--Fine CSS navbar--> 
