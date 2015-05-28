@@ -22,7 +22,7 @@ function ready() {
             corso: id
         },
         crossDomain: true,
-        url: "http://biggympolimi.altervista.org/getCourse.php",
+        url: "http://biggympolimi.altervista.org/php/getCourse.php",
         success: function (response) {
             //chiamata ajax ha avuto successo allora carico tutto quello che c'è da caricare nella pagina
             console.log(JSON.parse(response));
@@ -33,8 +33,8 @@ function ready() {
             $("#pannello-3 .panel-body").text(course[0].whos);
             $("#pannello-4 .panel-body").text(course[0].why);
             //setto le immagini per ora due
-            $(".first-slide").attr("src", "img/" + course[0].img1);
-            $(".second-slide").attr("src", "img/" + course[0].img2);
+            $(".first-slide").attr("src", course[0].img1);
+            $(".second-slide").attr("src", course[0].img2);
             //setto la room
             $("#room").html("<h2>Room: <a href='#'  id='roomlink'>"+course[0].room+"</a></h2>");
             //setto le schedule

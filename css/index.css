@@ -1,51 +1,75 @@
-
-
+/* mi dava fastidio che scompariva la scrollbar */
+html {
+    overflow-y: scroll;
+}
 /*popupo*/
+
 body {
-  padding-top: 50px;
+    padding-top: 50px;
 }
- 
-.thumbnail {
-    position:relative;
-    overflow:hidden;
-}
- 
-.caption {
-    position:absolute;
-    top:0;
-    right:0;
-    background:rgba(30, 144, 255, 0.75);
-    width:100%;
-    height:100%;
-    padding:2%;
-    display: none;
-    text-align:center;
-    color:#fff !important;
-    z-index:2;
-}
-
-
-/* Home Page Carousel */
-
-header.carousel {
-    height: 50%;
-}
-
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
-    height: 100%;
-}
-
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
 
 #categorie{
-    margin-bottom: 50px;
     margin-top: 50px;
 }
+
+
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(30, 144, 255, 0.75 );
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    display: none;
+    text-align: center;
+    color: #fff !important;
+    z-index: 2;
+}
+/* Home Page Carousel */
+
+/* SLIDER */
+
+.jssora21l,
+.jssora21r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url(../img/a21.png) center center no-repeat;
+    overflow: hidden;
+}
+
+.jssora21l {
+    background-position: -3px -33px;
+}
+
+.jssora21r {
+    background-position: -63px -33px;
+}
+
+.jssora21l:hover {
+    background-position: -123px -33px;
+}
+
+.jssora21r:hover {
+    background-position: -183px -33px;
+}
+
+.jssora21l.jssora21ldn {
+    background-position: -243px -33px;
+}
+
+.jssora21r.jssora21rdn {
+    background-position: -303px -33px;
+}
+
+/* SLIDER */
