@@ -7,9 +7,12 @@ html {
 body {
     padding-top: 50px;
 }
-
+#social{
+margin-top: 20px;
+}
 #categorie{
-    margin-top: 50px;
+    margin-bottom: 55px;
+    margin-top: 55px;
 }
 
 
@@ -73,3 +76,11 @@ body {
 }
 
 /* SLIDER */
+
+#detail{
+margin-top: 20px;
+}
+
+footer{
+     background-color: rgba(30, 144, 255, 0.75 );
+}

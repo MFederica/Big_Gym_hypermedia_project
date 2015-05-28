@@ -134,7 +134,7 @@ function ready() {
     $("#collapselevel").text(lev);
 
     function addElement(elements, i) {
-        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from="+lev+"' class='thumbnail'><img class='responsive' src='" + courses[i].img1 + "'</img></a></p><p>" + courses[i].description + "</p></div></div>"; //Occhio URL immagini da cambiare
+        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3 class='text-center'>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from="+lev+"' class='thumbnail'><img class='responsive' src='" + courses[i].img1 + "'</img></a></p><p class='text-center'>" + courses[i].description + "</p></div></div>"; //Occhio URL immagini da cambiare
         return (elements);
     }
 }

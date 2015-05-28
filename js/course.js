@@ -35,6 +35,7 @@ function ready() {
             //setto le immagini per ora due
             $(".first-slide").attr("src", course[0].img1);
             $(".second-slide").attr("src", course[0].img2);
+            $(".third-slide").attr("src", course[0].img3);
             //setto la room
             $("#room").html("<h2>Room: <a href='#'  id='roomlink'>"+course[0].room+"</a></h2>");
             //setto le schedule
@@ -99,6 +100,8 @@ function ready() {
             $(this).find('.caption').slideUp(250); //.fadeOut(205)
         }
     );
+    
+    
 
     //funzione per recuperare i parametri dall'url
     function getQueryVariable(variable) {
