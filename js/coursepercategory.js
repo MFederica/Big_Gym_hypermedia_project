@@ -17,7 +17,7 @@ function ready() {
             cat: cat
         },
         crossDomain: true,
-        url: "http://biggympolimi.altervista.org/getCourseCat.php",
+        url: "http://biggympolimi.altervista.org/php/getCourseCat.php",
         success: function (response) {
             console.log(JSON.parse(response));
             courses = JSON.parse(response);
@@ -151,7 +151,7 @@ function ready() {
 
     //funzione che mi aggiunge elementi a una stringa
     function addElement(elements, i) {
-        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from=cat' class='thumbnail'><img class='responsive' src='img/" + courses[i].img1 + "'></img></a></p><p>" + courses[i].description + "</p></div></div>";
+        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3 class='text-center'>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from=cat' class='thumbnail'><img class='responsive' src='" + courses[i].img1 + "'></img></a></p><p class='text-center'>" + courses[i].description + "</p></div></div>";
         return (elements);
     }
 }
