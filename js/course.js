@@ -37,7 +37,7 @@ function ready() {
             $(".second-slide").attr("src", course[0].img2);
             $(".third-slide").attr("src", course[0].img3);
             //setto la room
-            $("#room").html("<h2>Room: <a href='#'  id='roomlink'>"+course[0].room+"</a></h2>");
+            $("#room").html("<h2>Room: <a href='#'  id='roomlink'>" + course[0].room + "</a></h2>");
             //setto le schedule
             var schedule = course[0].schedule.split('|');
             for (var i = 0; i < schedule.length; i++) {
@@ -75,33 +75,49 @@ function ready() {
                 $("#back").text("back to " + course[0].category);
                 $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
             } else {
-                //TODO CON PARAMETRI FEDE
                 $("#info").text(from.toLocaleUpperCase() + " COURSES");
                 $("#back").text("back to " + from);
-                $("#back").attr("href", "allcourses.html?lev="+from);
+                $("#back").attr("href", "allcourses.html?lev=" + from);
             }
-
-
-
         },
         error: function (request, error) {
             console.log("Error");
         }
     });
-    //codice per il popover
-    //tooltip è una funzione usata per attivare cose in popover
-    $("[rel='tooltip']").tooltip();
 
-    $('.thumbnail').hover(
-        function () {
-            $(this).find('.caption').slideDown(250); //.fadeIn(250)
+
+    $.ajax({
+        method: "POST",
+        //passo come parametro l'id del corso da caricare
+        data: {
+            corso: id
         },
-        function () {
-            $(this).find('.caption').slideUp(250); //.fadeOut(205)
+        crossDomain: true,
+        url: "http://biggympolimi.altervista.org/php/getCourse.php",
+        success: function (response) {
+            //chiamata ajax ha avuto successo allora carico tutto quello che c'è da caricare nella pagina
+            console.log(JSON.parse(response));
+            course = JSON.parse(response);
+
+            $("#instructor").html("<div class='col-xs-6 col-md-6'><div class='thumbnail'><div class='caption'><h4>Megan Fox</h4><p><a href='' class='label label-danger' rel='tooltip' title='Hi'>GoTo</a></p></div><img src='http://biggympolimi.altervista.org/img/instructors/instructor0.jpg' alt='...'></div></div>");
+
+            $("[rel='tooltip']").tooltip();
+
+            $('.thumbnail').hover(
+                function () {
+                    $(this).find('.caption').slideDown(250); //.fadeIn(250)
+                },
+                function () {
+                    $(this).find('.caption').slideUp(250); //.fadeOut(205)
+                }
+            );
+        },
+        error: function (request, error) {
+            console.log("Error");
         }
-    );
-    
-    
+    });
+
+
 
     //funzione per recuperare i parametri dall'url
     function getQueryVariable(variable) {

@@ -17,7 +17,7 @@
     <link href="css/docs.css" rel="stylesheet">
 
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js" S></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jssor.slider.mini.js"></script>
     <script src="js/index.js"></script>
 
@@ -83,53 +83,69 @@
 <!--FINE NAVBAR-->
 
 
-<div style="min-height: 50px;">
-    <!-- Jssor Slider Begin -->
-    <!-- To move inline styles to css file/block, please specify a class name for each element. -->
-    <!-- ================================================== -->
-    <div id="slider1_container" style="display: none; position: relative; margin: 0 auto;
+<div id="slider1_container" style="position: relative; margin: 0 auto;
         top: 0px; left: 0px; width: 1300px; height: 620px; overflow: hidden;">
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+    <!-- Loading Screen -->
+    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
                 top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+        </div>
+        <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
                 top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
         </div>
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 620px; overflow: hidden;">
-            <div>
-                <img u="image" src2="img/slider1.jpg" />
-
-            </div>
-            <div>
-                <img u="image" src2="img/slider2.jpg" />
-            </div>
-            <div>
-                <img u="image" src2="img/slider3.jpg" />
-            </div>
-        </div>
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype"></div>
-        </div>
-        <!-- Arrow Left -->
-        <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">
-            </span>
-        <!-- Arrow Right -->
-        <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">
-            </span>
-        <!--#endregion Arrow Navigator Skin End -->
-        <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
     </div>
-    <!-- Jssor Slider End -->
+    <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
+            height: 620px; overflow: hidden;">
+
+
+        <!-- Slide 1 -->
+        <div>
+            <img u="image" src="img/slider1.jpg" />
+
+            </a>
+            <div u=caption t="*" class="captionOrange" style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
+                mobile ready, touch swipe
+
+            </div>
+        </div>
+
+
+        <!-- Slide 2 -->
+        <div>
+            <img u="image" src="img/slider2.jpg" />
+
+        </div>
+
+
+        <!-- Slide 3 -->
+        <div>
+            <img u="image" src="img/slider3.jpg" />
+
+        </div>
+    </div>
+
+    <!--#region Bullet Navigator Skin Begin -->
+    <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
+
+
+
+   
+
+
+
+    <!--#region Arrow Navigator Skin Begin -->
+    <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+
+    <!-- Arrow Left -->
+    <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">
+        </span>
+    <!-- Arrow Right -->
+    <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">
+        </span>
+    <!--#endregion Arrow Navigator Skin End -->
+    <a style="display: none" href="http://www.jssor.com">Image Slider</a>
 </div>
-
-
-
 
 
 <div class="container" id="categorie">
@@ -217,28 +233,28 @@
 <footer>
 
     <div id="social" class=" text-center">
-    <a class="btn btn-social-icon btn-facebook">
-        <i class="fa fa-facebook"></i>
-    </a>
-    <a class="btn btn-social-icon btn-flickr">
-        <i class="fa fa-flickr"></i>
-    </a>
-    <a class="btn btn-social-icon btn-google">
-        <i class="fa fa-google"></i>
-    </a>
-    <a class="btn btn-social-icon btn-instagram">
-        <i class="fa fa-instagram"></i>
-    </a>
-    <a class="btn btn-social-icon btn-pinterest">
-        <i class="fa fa-pinterest"></i>
-    </a>
-    <a class="btn btn-social-icon btn-twitter">
-        <i class="fa fa-twitter"></i>
-    </a>
-</div>
+        <a class="btn btn-social-icon btn-facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a class="btn btn-social-icon btn-flickr">
+            <i class="fa fa-flickr"></i>
+        </a>
+        <a class="btn btn-social-icon btn-google">
+            <i class="fa fa-google"></i>
+        </a>
+        <a class="btn btn-social-icon btn-instagram">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a class="btn btn-social-icon btn-pinterest">
+            <i class="fa fa-pinterest"></i>
+        </a>
+        <a class="btn btn-social-icon btn-twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
 
 
-    <p  class=" text-center" id="detail">&copy; 20 14 Fusari Paolo - Marocco Federica, Inc.   &middot; <a href="#">Privacy</a>    &middot; <a href="#">Terms</a>
+    <p class=" text-center" id="detail">&copy; 20 14 Fusari Paolo - Marocco Federica, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
     </p>
 </footer>
 

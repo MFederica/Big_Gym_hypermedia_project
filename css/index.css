@@ -1,4 +1,5 @@
 /* mi dava fastidio che scompariva la scrollbar */
+
 html {
     overflow-y: scroll;
 }
@@ -7,14 +8,15 @@ html {
 body {
     padding-top: 50px;
 }
-#social{
-margin-top: 20px;
+
+#social {
+    margin-top: 20px;
 }
-#categorie{
+
+#categorie {
     margin-bottom: 55px;
     margin-top: 55px;
 }
-
 
 .thumbnail {
     position: relative;
@@ -25,7 +27,7 @@ margin-top: 20px;
     position: absolute;
     top: 0;
     right: 0;
-    background: rgba(30, 144, 255, 0.75 );
+    background: rgba(30, 144, 255, 0.75);
     width: 100%;
     height: 100%;
     padding: 2%;
@@ -35,7 +37,6 @@ margin-top: 20px;
     z-index: 2;
 }
 /* Home Page Carousel */
-
 /* SLIDER */
 
 .jssora21l,
@@ -75,12 +76,28 @@ margin-top: 20px;
     background-position: -303px -33px;
 }
 
-/* SLIDER */
-
-#detail{
-margin-top: 20px;
+.captionOrange,
+.captionBlue,
+.captionBlack,
+.captionSymbol {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
 }
 
-footer{
-     background-color: rgba(30, 144, 255, 0.75 );
+.captionOrange {
+    background: #EB5100;
+    background-color: rgba(235, 81, 0, 0.6);
+}
+/* SLIDER */
+
+#detail {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: rgba(30, 144, 255, 0.75);
 }
