@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    
-    
-   
-    
+
+
+
+
     $("[rel='tooltip']").tooltip();
 
     $('.thumbnail').hover(
@@ -103,6 +103,25 @@ $(document).ready(function () {
             $Rotate: 0.8
         }
     };
+
+    _CaptionTransitions["RTTL|BL"] = {
+        $Duration: 900,
+        x: 0.6,
+        y: -0.6,
+        $Zoom: 11,
+        $Rotate: 1,
+        $Easing: {
+            $Left: $JssorEasing$.$EaseInCubic,
+            $Top: $JssorEasing$.$EaseInCubic,
+            $Zoom: $JssorEasing$.$EaseInCubic,
+            $Opacity: $JssorEasing$.$EaseLinear,
+            $Rotate: $JssorEasing$.$EaseInCubic
+        },
+        $Opacity: 2,
+        $Round: {
+            $Rotate: 0.8
+        }
+    }
     _CaptionTransitions["CLIP|LR"] = {
         $Duration: 900,
         $Clip: 15,
