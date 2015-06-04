@@ -86,7 +86,7 @@ footer {
 }
 
 .captionOrange,
-.captionBlack {
+.captionBlue {
     color: #fff;
     font-size: 20px;
     line-height: 30px;
@@ -95,14 +95,11 @@ footer {
 }
 
 .captionOrange {
-    background: #EB5100;
-    background-color: rgba(235, 81, 0, 0.6);
+    background-color: rgba(250, 100, 0, 0.6);
 }
 
-.captionBlack {
-    font-size: 16px;
-    background: #000;
-    background-color: rgba(0, 0, 0, 0.4);
+.captionBlue {
+    background-color: rgba(30, 144, 255, 0.6);
 }
 
 a.captionOrange,

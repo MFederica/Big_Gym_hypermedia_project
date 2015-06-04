@@ -5,6 +5,7 @@ var storedCourses; //lista dei corsi salvata sul browser del client per il guide
 var id; //id del corso da visualizzare passato come parametro
 var course; //campi del database del corso
 var from; //da dove arriva il corso passato come parametro cat-all-basic-medium-advanced
+var instructors;
 
 function ready() {
     //recupero lista di corsi per il guided tour
@@ -27,6 +28,9 @@ function ready() {
             //chiamata ajax ha avuto successo allora carico tutto quello che c'è da caricare nella pagina
             console.log(JSON.parse(response));
             course = JSON.parse(response);
+            
+            $("title").text("Big Gym " + course[0].name +" - " + course[0].level);
+            
             //setto l'accordion
             $("#pannello-1 .panel-body").text(course[0].whoi);
             $("#pannello-2 .panel-body").text(course[0].what);
@@ -37,7 +41,7 @@ function ready() {
             $(".second-slide").attr("src", course[0].img2);
             $(".third-slide").attr("src", course[0].img3);
             //setto la room
-            $("#room").html("<h2>Room: <a href='#'  id='roomlink'>" + course[0].room + "</a></h2>");
+            $("#room").html("<h2> <span class='glyphicon glyphicon-home' aria-hidden='true'></span> Room: <a href='#'  id='roomlink'>" +course[0].room+"</a></h2>");
             //setto le schedule
             var schedule = course[0].schedule.split('|');
             for (var i = 0; i < schedule.length; i++) {
@@ -86,6 +90,7 @@ function ready() {
     });
 
 
+    //ajax per recuperare gli istruttori
     $.ajax({
         method: "POST",
         //passo come parametro l'id del corso da caricare
@@ -93,14 +98,20 @@ function ready() {
             corso: id
         },
         crossDomain: true,
-        url: "http://biggympolimi.altervista.org/php/getCourse.php",
+        url: "http://biggympolimi.altervista.org/php/getInstructorCourse.php",
         success: function (response) {
             //chiamata ajax ha avuto successo allora carico tutto quello che c'è da caricare nella pagina
             console.log(JSON.parse(response));
-            course = JSON.parse(response);
+            instructors = JSON.parse(response);
+            var instEl = "";
+            for (var i = 0; i < instructors.length; i++) {
+                
+                instEl += "<div class='col-xs-6 col-md-6'><div class='thumbnail'><div class='caption'><h4>"+instructors[i].name+"</h4><p><a href='instructor.html?id=" + instructors[i].id +"'class='label label-danger' rel='tooltip' title='Hi'>Visit my page</a></p></div><img src='"+instructors[i].img1+"' alt='...'></div></div>";
+            }
 
-            $("#instructor").html("<div class='col-xs-6 col-md-6'><div class='thumbnail'><div class='caption'><h4>Megan Fox</h4><p><a href='' class='label label-danger' rel='tooltip' title='Hi'>GoTo</a></p></div><img src='http://biggympolimi.altervista.org/img/instructors/instructor0.jpg' alt='...'></div></div>");
+            $("#instructor").html(instEl);
 
+            //inizializzazione popover
             $("[rel='tooltip']").tooltip();
 
             $('.thumbnail').hover(

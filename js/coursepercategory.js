@@ -21,6 +21,8 @@ function ready() {
         success: function (response) {
             console.log(JSON.parse(response));
             courses = JSON.parse(response);
+            $("title").text("Big Gym " + cat + " courses");
+            
             //salvo la lista di corsi da visulizzare nel browser del client così per il guided tour dopo non devo richiamare il server
             localStorage["courses"] = JSON.stringify(courses);
             console.log("numero corsi= " + courses.length + "numero pagine " + Math.ceil(courses.length / 6));
