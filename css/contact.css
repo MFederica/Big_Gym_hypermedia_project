@@ -1,101 +1,73 @@
 body {
-background-color: #f5f5f5;
-
+    background-color: #f5f5f5;
 }
 
-.top
-{
-    margin-left:0px;
-    margin-top:50px;
-    margin-bottom:40px;
+.top {
+    margin-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 .container .intro {
-
     margin-top: 40px;
 }
 
-@media (min-width:765px) {
- 
+@media (min-width: 765px) {
     #text {
-    margin-top: 0px;
+        margin-top: 0px;
     }
-    
     #map-column {
-    padding-left: 5px;
+        padding-left: 5px;
     }
-    
-     #canvas {
+    #canvas {
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 766px) {
+    #text {
+        margin-top: 20px;
+    }
+    #canvas {
         padding-top: 10px;
         padding-left: 0px;
         padding-right: 0px;
         padding-bottom: 0;
-        margin: 0;
+        margin-left: 5px;
+        margin-right: 5px;
         margin-bottom: 10px;
-         margin-left: 10px;
-         margin-right: 10px;
-        }
-    
-   
-    
-    
-    
-}
-    
-    @media (max-width:766px) {
- 
-        #text {
-        margin-top: 20px;
-        }
-        
-        #canvas {
-        padding-top: 10px;
-        padding-left: 0px;
-        padding-right:0px;
-        padding-bottom: 0;
-        margin: 0;
-        margin-bottom: 10px;
-        }
-        
-         #map-column {
+    }
+    #map-column {
         padding-left: 10px;
         padding-right: 10px;
-        }
     }
-
+}
 
 #text {
-
-
     text-align: justify;
 }
 
 #canvas {
-
-background: white;
-
+    background: white;
 }
 
 #title {
-
-    margin-top: 0px; 
-    margin-bottom: 30px; 
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 #info {
-
-margin-top: 20px;
-text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
- #main-container {
-        
-        margin-top: -15px;
-    
-    }
-
-
-
-
-
-
+#main-container {
+    margin-top: -15px;
+}

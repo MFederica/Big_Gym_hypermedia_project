@@ -31,7 +31,7 @@ function ready() {
             
             //Inizio con il nome
              $("#name").html(instr[0].name);
-            
+            $("title").text("Big Gym - " + instr[0].name);
             
             //Link per i tweet da DB
            $(".twitter-timeline").attr("href", instr[0].link);
@@ -118,7 +118,7 @@ function ready() {
                 for(var z=0; z<courses.length; z++) {
                 if(courses[z].category===unique_cat[j]) {
                 
-                $("#row"+j).append(" <div class='col-xs-4 col-md-4 course-image'><div class='thumbnail'><div class='caption'><h4>"+courses[z].name+"-"+courses[z].level+"</h4><p><a href='http://biggympolimi.altervista.org/course.html?id="+courses[z].id+"'class='label label-danger' rel='tooltip' title='Hi'>GoTo</a></p></div><img src='"+courses[z].img1+"' alt='...'></div></div>");
+                $("#row"+j).append(" <div class='col-xs-6 col-md-4 course-image'><div class='thumbnail'><div class='caption'><h4>"+courses[z].name+"-"+courses[z].level+"</h4><p><a href='http://biggympolimi.altervista.org/course.html?id="+courses[z].id+"&from=instr'class='label label-danger' rel='tooltip' title='Hi'>GoTo</a></p></div><img src='"+courses[z].img1+"' alt='...'></div></div>");
                 }    
                  $("[rel='tooltip']").tooltip();
               $('.thumbnail').hover(

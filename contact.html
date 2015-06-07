@@ -8,20 +8,20 @@
     <meta name="author" content="">
 
     <link rel="icon" href="img/logo.jpg">
-   <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
-      <link href="css/contact.css" rel="stylesheet">
-   
+    <link href="css/contact.css" rel="stylesheet">
+
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.bootpag.min.js" type="text/javascript"></script>
+    <script src="js/jquery.bootpag.min.js" type="text/javascript"></script>
     <script src="js/contact.js" type="text/javascript"></script>
-    
-   <script type="text/javascript" charset="utf-8" src="http://maps.googleapis.com/maps/api/js"></script>
-    
-    
-   
+
+    <script type="text/javascript" charset="utf-8" src="http://maps.googleapis.com/maps/api/js"></script>
+
+
+
 </head>
 
 <!--INIZIA LA NAVBAR-->
@@ -32,30 +32,30 @@
                 <span class="sr-only">Toggle navigation</span>
                 <span class="glyphicon glyphicon-circle-arrow-down" style="color:##0e5180"></span>
             </button>
-            <a href="#" id="brand"><img src="img/logo.jpg" id="logo"></img>
+            <a href="index.html" id="brand"><img src="img/logo.jpg" id="logo"></img>
             </a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
 
-                <li class="dropdown">
+                <li class="dropdown  active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="about">About us <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">The gym</a>
                         </li>
                         <li><a href="#">Equipment</a>
                         </li>
-                        <li><a href="#">Contact info</a>
+                        <li><a href="contact.html">Contact info</a>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="courses">Courses<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Schedule</a>
                         </li>
-                        <li><a href="#">Our courses</a>
+                        <li><a href="allcourses.html?lev=all">Our courses</a>
                         </li>
                         <li><a href="#">Categories</a>
                         </li>
@@ -92,20 +92,20 @@
     </div>
 </div>
 <!--FINE TITOLO-->
- 
+
 <div id="main-container">
- <div class="row well" id="canvas">
-      <div class ="col-sm-7 col-sm-push-5" id="map-column">
-     <div id="map-canvas" style="height: 380px;
+    <div class="row well" id="canvas">
+        <div class="col-sm-7 col-sm-push-5" id="map-column">
+            <div id="map-canvas" style="height: 380px;
         margin: 0;                 
         padding: 0;"></div>
-          <div id="info"></div>
-     </div>
-     <div class="col-sm-5 col-sm-pull-7" id="map" >
-    <div id="text"></div>
-         </div>
+            <div id="info"></div>
+        </div>
+        <div class="col-sm-5 col-sm-pull-7" id="map">
+            <div id="text"></div>
+        </div>
+    </div>
 </div>
-</div>    
 
 
 
@@ -117,4 +117,3 @@
 </body>
 
 </html>
-

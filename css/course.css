@@ -6,19 +6,21 @@ html {
     overflow-y: scroll;
 }
 
-.well {
-    background-color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 5px;
+#main-container {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: white;
 }
 
 #categ {
     margin-top: 0px;
 }
 
-#schedule{
+#schedule {
     margin-top: 0px;
 }
 
@@ -148,16 +150,21 @@ a {
 }
 /**fine pophover instructor**/
 
-
-
-
-
 @media (min-width: 996px) {
-    
-    #dx {
-   border-left: 1px solid #fa6900;
-  
- }
-    
-    .well {}
+    #sx {
+        border-right: 1px solid #fa6900;
+        min-height: 700px;
+    }
+}
+
+@media (max-width: 766px) {
+    #main-container {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: white;
+    }
 }

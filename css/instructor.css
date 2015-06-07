@@ -13,8 +13,6 @@ body {
     margin-top: 40px;
 }
 
-
-
 .carousel-inner .item {
     overflow: hidden;
     max-width: 100%;
@@ -54,7 +52,6 @@ body {
     padding-left: 0;
 }
 
-
 #main-info {
     margin-top: 30px;
 }
@@ -67,17 +64,6 @@ body {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
-    #main-container {
-        margin-top: -30px;
-        margin-bottom: 30px;
-        margin-left: 40px;
-        margin-right: 40px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 20px;
-        background: white;
-    }
-    
 }
 
 @media (max-width: 995px) {
@@ -86,19 +72,7 @@ body {
         margin-bottom: 70px;
         width: 100%;
     }
-    #main-container {
-        margin-top: -30px;
-        margin-bottom: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 20px;
-        background: white;
-    }
 }
-
-
 
 #qual {
     padding-left: 15px;
@@ -118,14 +92,22 @@ body {
     background: white;
 }
 
-
 #title-course {
     margin-left: 15px;
 }
 
- #tweet {
-    
-        height: 320px;
-    
+#tweet {
+    height: 320px;
+}
 
-
+@media (max-width: 766px) {
+    #main-container {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: white;
+    }
+}
