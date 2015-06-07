@@ -1,4 +1,5 @@
 /* mi dava fastidio che scompariva la scrollbar */
+
 html {
     overflow-y: scroll;
 }
@@ -7,14 +8,15 @@ html {
 body {
     padding-top: 50px;
 }
-#social{
-margin-top: 20px;
+
+#social {
+    margin-top: 20px;
 }
-#categorie{
+
+#categorie {
     margin-bottom: 55px;
     margin-top: 55px;
 }
-
 
 .thumbnail {
     position: relative;
@@ -25,7 +27,7 @@ margin-top: 20px;
     position: absolute;
     top: 0;
     right: 0;
-    background: rgba(30, 144, 255, 0.75 );
+    background: rgba(30, 144, 255, 0.75);
     width: 100%;
     height: 100%;
     padding: 2%;
@@ -35,7 +37,6 @@ margin-top: 20px;
     z-index: 2;
 }
 /* Home Page Carousel */
-
 /* SLIDER */
 
 .jssora21l,
@@ -74,13 +75,90 @@ margin-top: 20px;
 .jssora21r.jssora21rdn {
     background-position: -303px -33px;
 }
-
 /* SLIDER */
 
-#detail{
-margin-top: 20px;
+#detail {
+    margin-top: 20px;
 }
 
-footer{
-     background-color: rgba(30, 144, 255, 0.75 );
+footer {
+    background-color: rgba(30, 144, 255, 0.75);
+}
+
+.captionOrange,
+.captionBlue {
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.captionOrange {
+    background-color: rgba(250, 100, 0, 0.6);
+}
+
+.captionBlue {
+    background-color: rgba(30, 144, 255, 0.6);
+}
+
+a.captionOrange,
+A.captionOrange:active,
+A.captionOrange:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.captionOrange:hover {
+    color: #eb5100;
+    text-decoration: underline;
+    background-color: #eeeeee;
+    background-color: rgba(238, 238, 238, 0.7);
+}
+
+.bricon {
+    background: url(../img/browser-icons.png);
+}
+/* jssor slider bullet navigator skin 11 css */
+/*
+            .jssorb11 div           (normal)
+            .jssorb11 div:hover     (normal mouseover)
+            .jssorb11 .av           (active)
+            .jssorb11 .av:hover     (active mouseover)
+            .jssorb11 .dn           (mousedown)
+            */
+
+.jssorb11 {
+    position: absolute;
+}
+
+.jssorb11 div,
+.jssorb11 div:hover,
+.jssorb11 .av {
+    position: absolute;
+    /* size of bullet elment */
+    
+    width: 11px;
+    height: 11px;
+    background: url(../img/b11.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.jssorb11 div {
+    background-position: -10px -10px;
+}
+
+.jssorb11 div:hover,
+.jssorb11 .av:hover {
+    background-position: -40px -10px;
+}
+
+.jssorb11 .av {
+    background-position: -70px -10px;
+}
+
+.jssorb11 .dn,
+.jssorb11 .dn:hover {
+    background-position: -100px -10px;
 }
