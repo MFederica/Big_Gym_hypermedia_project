@@ -79,9 +79,9 @@ function ready() {
 
             if (from == "instr") {
                 $("#info").text("COURSES");
-                $("#guided").remove();
                 $("#main-container").css("margin-bottom", "70px");
             } else {
+                $("#guided").html("<nav><ul class='pager'><li><a id='prev'>Prev</a></li><li><a id='back'></a></li><li><a id='next'>Next</a></li></ul></nav>");
                 if (from == "cat") {
                     $("#info").text(course[0].category.toUpperCase() + " COURSES");
                     $("#back").text("back to " + course[0].category);

@@ -24,95 +24,97 @@
 
 </head>
 
-<!--INIZIA LA NAVBAR-->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container" id="navcontainer">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="glyphicon glyphicon-circle-arrow-down" style="color:##0e5180"></span>
-            </button>
-            <a href="index.html" id="brand"><img src="img/logo.jpg" id="logo"></img>
-            </a>
+<body>
+
+    <!--INIZIA LA NAVBAR-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container" id="navcontainer">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="glyphicon glyphicon-circle-arrow-down" style="color:##0e5180"></span>
+                </button>
+                <a href="index.html" id="brand"><img src="img/logo.jpg" id="logo"></img>
+                </a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown  active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="about">About us <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">The gym</a>
+                            </li>
+                            <li><a href="#">Equipment</a>
+                            </li>
+                            <li><a href="contact.html">Contact info</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="courses">Courses<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Schedule</a>
+                            </li>
+                            <li><a href="allcourses.html?lev=all">Our courses</a>
+                            </li>
+                            <li><a href="#">Categories</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="instructors">Instructors <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Our instructors</a>
+                            </li>
+                            <li><a href="#">Monthly award</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" id="rooms">Rooms</a>
+                    </li>
+                    <li><a href="#about" id="join">Join us</a>
+                    </li>
+                    <li><a href="#contact" id="testimonials">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <!--FINE NAVBAR-->
 
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-
-                <li class="dropdown  active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="about">About us <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">The gym</a>
-                        </li>
-                        <li><a href="#">Equipment</a>
-                        </li>
-                        <li><a href="contact.html">Contact info</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="courses">Courses<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Schedule</a>
-                        </li>
-                        <li><a href="allcourses.html?lev=all">Our courses</a>
-                        </li>
-                        <li><a href="#">Categories</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="instructors">Instructors <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Our instructors</a>
-                        </li>
-                        <li><a href="#">Monthly award</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li><a href="#" id="rooms">Rooms</a>
-                </li>
-                <li><a href="#about" id="join">Join us</a>
-                </li>
-                <li><a href="#contact" id="testimonials">Testimonials</a>
-                </li>
-            </ul>
+    <!--TITOLO-->
+    <div class="container top">
+        <div class="row">
+            <div class="col-sm-10">
+                <h2 class="text-color">CONTACT INFO</h2>
+            </div>
         </div>
     </div>
-</nav>
-<!--FINE NAVBAR-->
+    <!--FINE TITOLO-->
 
-<!--TITOLO-->
-<div class="container top">
-    <div class="row">
-        <div class="col-sm-10">
-            <h2 class="text-color">CONTACT INFO</h2>
-        </div>
-    </div>
-</div>
-<!--FINE TITOLO-->
-
-<div id="main-container">
-    <div class="row well" id="canvas">
-        <div class="col-sm-7 col-sm-push-5" id="map-column">
-            <div id="map-canvas" style="height: 380px;
+    <div id="main-container">
+        <div class="row well" id="canvas">
+            <div class="col-sm-7 col-sm-push-5" id="map-column">
+                <div id="map-canvas" style="height: 380px;
         margin: 0;                 
         padding: 0;"></div>
-            <div id="info"></div>
-        </div>
-        <div class="col-sm-5 col-sm-pull-7" id="map">
-            <div id="text"></div>
+                <div id="info"></div>
+            </div>
+            <div class="col-sm-5 col-sm-pull-7" id="map">
+                <div id="text"></div>
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 </body>
 
