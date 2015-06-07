@@ -118,7 +118,7 @@ function ready() {
                 for(var z=0; z<courses.length; z++) {
                 if(courses[z].category===unique_cat[j]) {
                 
-                $("#row"+j).append(" <div class='col-xs-6 col-md-4 course-image'><div class='thumbnail'><div class='caption'><h4>"+courses[z].name+"-"+courses[z].level+"</h4><p><a href='http://biggympolimi.altervista.org/course.html?id="+courses[z].id+"&from=instr'class='label label-danger' rel='tooltip' title='Hi'>GoTo</a></p></div><img src='"+courses[z].img1+"' alt='...'></div></div>");
+                $("#row"+j).append(" <div class='col-xs-6 col-md-6 course-image'><div class='thumbnail'><div class='caption'><h4>"+courses[z].name+"-"+courses[z].level+"</h4><p><a href='http://biggympolimi.altervista.org/course.html?id="+courses[z].id+"&from=instr'class='label label-danger' rel='tooltip' title='Hi'>GoTo</a></p></div><img src='"+courses[z].img1+"' alt='...'></div></div>");
                 }    
                  $("[rel='tooltip']").tooltip();
               $('.thumbnail').hover(

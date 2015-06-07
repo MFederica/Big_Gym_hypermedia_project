@@ -110,4 +110,34 @@ body {
         padding-right: 5px;
         background: white;
     }
+    
+    .course-image { 
+    
+       max-width: 250px;
+   
+    }
+    
+    
+   }
+
+@media (max-width: 480px) {
+    
+     .course-image { 
+    
+       max-width: 150px;
+     
+    }
+    
+     #main-container {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background: white;
+    }
+    
+    
+    
 }
