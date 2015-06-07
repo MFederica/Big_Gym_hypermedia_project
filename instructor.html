@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Contact info</title>
+    <link rel="icon" href="img/logo.jpg">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/instructor.css" rel="stylesheet">
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.ba-resize.js"type="text/javascript"></script>
+     <script src="js/jquery.ba-resize.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.bootpag.min.js" type="text/javascript"></script>
+    <script src="js/instructor.js" type="text/javascript"></script>
+    
+</head>
+
+<body>
+    <!--INIZIA LA NAVBAR-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" id="navcontainer">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="glyphicon glyphicon-circle-arrow-down" style="color:##0e5180"></span>
+            </button>
+            <a href="#" id="brand"><img src="img/logo.jpg" id="logo"></img>
+            </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="about">About us <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">The gym</a>
+                        </li>
+                        <li><a href="#">Equipment</a>
+                        </li>
+                        <li><a href="#">Contact info</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="courses">Courses<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Schedule</a>
+                        </li>
+                        <li><a href="#">Our courses</a>
+                        </li>
+                        <li><a href="#">Categories</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="instructors">Instructors <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Our instructors</a>
+                        </li>
+                        <li><a href="#">Monthly award</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#" id="rooms">Rooms</a>
+                </li>
+                <li><a href="#about" id="join">Join us</a>
+                </li>
+                <li><a href="#contact" id="testimonials">Testimonials</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--FINE NAVBAR-->
+
+<!--TITOLO-->
+<div class="container top">
+    <div class="row">
+        <div class="col-sm-10">
+            <h2 class="text-color">OUR INSTRUCTORS</h2>
+        </div>
+    </div>
+</div>
+<!--FINE TITOLO-->
+
+<!--well di contenimento-->
+<div id="main-container" class="well">
+    
+    <!--nome istruttore-->
+    <div class="row">
+        <div class="col-md-4 col-xs-8">
+        <h2 id="name"></h2>
+        </div>
+    </div>
+    
+    <!--Slideshow immagini prima colonna-->
+        <div class="row">
+        <div class="col-md-8" id="to-check">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img class="first-slide" src="" alt="First slide">
+                        </div>
+                        <div class="item">
+                            <img class="second-slide" src="">
+                        </div>
+                        <div class="item">
+                            <img class="third-slide" src="">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+
+
+                </div> 
+
+</div>
+            
+             <!--Seconda parte con biografia-->
+    <div class="col-md-4" id="tweet">
+  <!--Sezione tweet-->
+   <a class="twitter-timeline"  href="" data-widget-id="">Tweet di @bzoto</a>
+        </div>            
+</div>
+
+<!--row degli awards e qualifications divisa in 2-->
+<div class="row" id="main-info">
+<div class="col-md-6" id="bio">
+    
+</div>
+<div class="col-md-6" id="to-right">
+<!--row delle qualification-->
+<div class="row" id="qual">
+    
+</div>
+<!-- row degli awards-->
+<div class="row" id="award">
+    
+</div>    
+</div>   
+</div>
+
+<!--sezione corsi-->
+
+<div class="row" id="course">
+
+</div>   
+
+</div>
+    
+
+
+
+
+
+</body>
+
+</html>

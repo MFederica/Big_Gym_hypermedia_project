@@ -14,7 +14,7 @@ function ready() {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://biggympolimi.altervista.org/php/getContactInfo.php", //Relative or absolute path to file.php file DA CAMBIARE
+        url: "php/getContactInfo.php", //Relative or absolute path to file.php file DA CAMBIARE
         error: function (data) {
             //do error stuff
         },
@@ -64,7 +64,7 @@ function ready() {
 
 function createInfo(elements) {
     
-    var info ="<h2 id='title'>"+elements[0].title+"</h2><h4>"+elements[0].where1+"</h4><p>"+elements[0].par1+"</p><h4>"+elements[0].where2+"</h4><p>"+elements[0].par2+"</p><h4>"+elements[0].where3+"</h4><p>"+elements[0].par3+"</p>"
+    var info ="<h2 id='title'>"+elements[0].title+"</h2><h4>"+elements[0].where1+" <i class='fa fa-train'></i></h4><p>"+elements[0].par1+"</p><h4> "+elements[0].where2+" <i class='fa fa-train'></i></h4> <p>"+elements[0].par2+"</p><h4>"+elements[0].where3+" <i class='fa fa-train'></i></h4><p>"+elements[0].par3+"</p>"
 
     $("#text").html(info);
 }

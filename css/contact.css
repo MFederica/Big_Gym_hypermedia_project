@@ -1,6 +1,5 @@
 body {
 background-color: #f5f5f5;
-height: 715px;
 
 }
 
@@ -8,7 +7,7 @@ height: 715px;
 {
     margin-left:0px;
     margin-top:50px;
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 .container .intro {
@@ -21,14 +20,49 @@ height: 715px;
     #text {
     margin-top: 0px;
     }
+    
+    #map-column {
+    padding-left: 5px;
+    }
+    
+     #canvas {
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0;
+        margin: 0;
+        margin-bottom: 10px;
+         margin-left: 10px;
+         margin-right: 10px;
+        }
+    
+   
+    
+    
+    
 }
     
     @media (max-width:766px) {
  
-    #text {
-    margin-top: 20px;
+        #text {
+        margin-top: 20px;
+        }
+        
+        #canvas {
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right:0px;
+        padding-bottom: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        }
+        
+         #map-column {
+        padding-left: 10px;
+        padding-right: 10px;
+        }
     }
-    }
+
 
 #text {
 
@@ -38,8 +72,6 @@ height: 715px;
 
 #canvas {
 
-margin-left: 20px;
-margin-right: 20px;
 background: white;
 
 }
@@ -53,15 +85,16 @@ background: white;
 #info {
 
 margin-top: 20px;
-    text-align: center;
+text-align: center;
 }
 
-.well {
-    margin-top:-30px;
-    margin-bottom:30px;
- 
+ #main-container {
+        
+        margin-top: -15px;
+    
+    }
 
-}
+
 
 
 
