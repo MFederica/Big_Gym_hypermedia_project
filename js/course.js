@@ -53,41 +53,44 @@ function ready() {
             $("#namecourse").text(course[0].name + " - " + course[0].level);
             $("#categorycourse").text(course[0].category);
             //cerco il corso all'interno della lista di corsi per il guided tour
+            if (from != "instr") {
+                var pn; //variabile che mi dice nell'array il corso visualizzato per poter fare +1/-1 sul guided tour
+                for (var i = 0; i < storedCourses.length; i++) {
+                    if (storedCourses[i].id == id) {
+                        pn = i;
+                        break;
+                    }
+                }
+                //setto next prev e turn back
+                if (pn == 0) {
+                    $("#prev").parent().attr("class", "disabled");
+                } else {
+                    $("#prev").attr("href", "course.html?id=" + storedCourses[+pn - +1].id + "&from=" + from);
+                }
 
-            var pn; //variabile che mi dice nell'array il corso visualizzato per poter fare +1/-1 sul guided tour
-            for (var i = 0; i < storedCourses.length; i++) {
-                if (storedCourses[i].id == id) {
-                    pn = i;
-                    break;
+                if (pn == +storedCourses.length - +1) {
+                    $("#next").parent().attr("class", "disabled");
+
+                } else {
+                    $("#next").attr("href", "course.html?id=" + storedCourses[+pn + +1].id + "&from=" + from);
                 }
             }
-            //setto next prev e turn back
-            if (pn == 0) {
-                $("#prev").parent().attr("class", "disabled");
+
+
+            if (from == "instr") {
+                $("#info").text("COURSES");
+                $("#main-container").css("margin-bottom", "70px");
             } else {
-                $("#prev").attr("href", "course.html?id=" + storedCourses[+pn - +1].id + "&from=" + from);
-            }
-
-            if (pn == +storedCourses.length - +1) {
-                $("#next").parent().attr("class", "disabled");
-
-            } else {
-                $("#next").attr("href", "course.html?id=" + storedCourses[+pn + +1].id + "&from=" + from);
-            }
-
-
-
-
-            $("#guided").html("<nav><ul class='pager'><li><a id='prev'>Prev</a></li><li><a id='back'></a></li><li><a id='next'>Next</a></li></ul></nav>");
-            if (from == "cat") {
-                $("#info").text(course[0].category.toUpperCase() + " COURSES");
-                $("#back").text("back to " + course[0].category);
-                $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
-            } else {
-                $("#info").text(from.toLocaleUpperCase() + " COURSES");
-                $("#back").text("back to " + from);
-                $("#back").attr("href", "allcourses.html?lev=" + from);
-
+                $("#guided").html("<nav><ul class='pager'><li><a id='prev'>Prev</a></li><li><a id='back'></a></li><li><a id='next'>Next</a></li></ul></nav>");
+                if (from == "cat") {
+                    $("#info").text(course[0].category.toUpperCase() + " COURSES");
+                    $("#back").text("back to " + course[0].category);
+                    $("#back").attr("href", "coursepercategory.html?cat=" + course[0].category);
+                } else {
+                    $("#info").text(from.toLocaleUpperCase() + " COURSES");
+                    $("#back").text("back to " + from);
+                    $("#back").attr("href", "allcourses.html?lev=" + from);
+                }
             }
         },
         error: function (request, error) {
