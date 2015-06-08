@@ -9,7 +9,7 @@ var instructors;
 
 function ready() {
     //recupero lista di corsi per il guided tour
-    storedCourses = JSON.parse(localStorage["courses"]);
+    
     //recupero i parametri passati con l'url
     from = getQueryVariable("from");
     id = getQueryVariable("id");
@@ -68,6 +68,7 @@ function ready() {
                 $("#info").text("COURSES");
                 $("#main-container").css("margin-bottom", "70px");
             } else {
+                storedCourses = JSON.parse(localStorage["courses"]);
                 $("#guided").html("<nav><ul class='pager'><li><a id='prev'>Prev</a></li><li><a id='back'></a></li><li><a id='next'>Next</a></li></ul></nav>");
                 //setto next prev e turn back
                 if (pn == 0) {

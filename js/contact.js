@@ -14,7 +14,7 @@ function ready() {
             method: "POST",
             //dataType: "json", //type of data
             crossDomain: true, //localhost purposes
-            url: "php/getContactInfo.php", //Relative or absolute path to file.php file DA CAMBIARE
+            url: "http://biggympolimi.altervista.org/php/getContactInfo.php", //Relative or absolute path to file.php file DA CAMBIARE
             error: function (data) {
                 //do error stuff
             },
