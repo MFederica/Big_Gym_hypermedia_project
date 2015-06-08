@@ -95,10 +95,18 @@ body {
 
 #title-course {
     margin-left: 15px;
+    margin-bottom: 0;
 }
 
 #tweet {
     height: 320px;
+}
+
+#catlink {
+
+    color:#f38630;
+    
+
 }
 
 @media (max-width: 766px) {
