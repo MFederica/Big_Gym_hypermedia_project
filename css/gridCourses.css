@@ -22,7 +22,6 @@ html {
     margin-right: 40px;
     padding-left: 30px;
     padding-right: 30px;
-
 }
 /**inizio stile del paginator**/
 
@@ -44,18 +43,8 @@ html {
 }
 /**fine stile paginator**/
 
-@media (min-width: 979px) {
-    #to-right {
-        border-left: 1px solid #fa6900;
-        padding-left: 10px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-}
-
 .well {
-    min-height: 250px;
+    min-height: 350px;
     padding: 19px;
     margin-bottom: 20px;
     background-color: white;
@@ -68,6 +57,7 @@ html {
 #sidenav {
     background-color: white;
 }
+
 /* make sidebar nav vertical */
 
 @media (min-width: 768px) {
@@ -91,6 +81,16 @@ html {
     }
 }
 
+@media (min-width: 979px) {
+    #to-right {
+        border-left: 1px solid #fa6900;
+        padding-left: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
 @media (max-width: 766px) {
     #main-container {
         margin-top: 20px;
@@ -101,6 +101,3 @@ html {
         padding-right: 5px;
     }
 }
-
-Status API Training Shop Blog About © 2015 GitHub,
-Inc. Terms Privac
