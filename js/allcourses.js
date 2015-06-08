@@ -32,27 +32,17 @@ function ready() {
             console.log("numero corsi= " + courses.length + "numero pagine " + Math.ceil(courses.length / 6));
 
             var elle1 = "";
-            var elle2 = "";
             //inizializzo la pagina con i corsi della pagina uno l'if è perchè se ho meno di 6 corsi devo visualizzare fino a maxlenght
             if (courses.length <= 6) {
                 for (var i = 0; i < courses.length; i++) {
-                    if (i < 3) {
                         elle1 += addElement(elle1, i);
-                    } else {
-                        elle2 += addElement(elle2, i);
-                    }
                 }
             } else {
                 for (var i = 0; i < 6; i++) {
-                    if (i < 3) {
                         elle1 += addElement(elle1, i);
-                    } else {
-                        elle2 += addElement(elle2, i);
-                    }
                 }
             }
             $("#row1").hide().html(elle1).slideDown(2000);
-            $("#row2").hide().html(elle2).slideDown(2000);
 
 
             //plugin bootpag
@@ -70,25 +60,16 @@ function ready() {
     $('#page-selection').bootpag({}).on("page", function (event, num) {
 
         var el1 = "";
-        var el2 = "";
         switch (num) {
         case 1:
             {
                 if (courses.length <= 6) {
                     for (var i = 0; i < courses.length; i++) {
-                        if (i < 3) {
                             el1 += addElement(el1, i);
-                        } else {
-                            el2 += addElement(el2, i);
-                        }
                     }
                 } else {
                     for (var i = 0; i < 6; i++) {
-                        if (i < 3) {
                             el1 += addElement(el1, i);
-                        } else {
-                            el2 += addElement(el2, i);
-                        }
                     }
                 }
                 $("#row1").hide().html(el1).slideDown(2000);
@@ -107,11 +88,7 @@ function ready() {
                     }
                 } else {
                     for (var i = 6; i < 12; i++) {
-                        if (i < 9) {
                             el1 += addElement(el1, i);
-                        } else {
-                            el2 += addElement(el2, i);
-                        }
                     }
                 }
                 $("#row1").hide().html(el1).slideDown(2000);
@@ -137,7 +114,7 @@ function ready() {
     $("#collapselevel").text(lev);
 
     function addElement(elements, i) {
-        elements = "<div class='col-md-4' id='" + courses[i].id + "'><div class='well' id='w'><h3 class='text-center'>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from="+lev+"' class='thumbnail'><img class='responsive' src='" + courses[i].img1 + "'</img></a></p><p class='text-center'>" + courses[i].description + "</p></div></div>"; //Occhio URL immagini da cambiare
+        elements = "<div class='col-lg-4 col-md-6 col-xs-12' id='" + courses[i].id + "'><div class='well' id='w'><h3 class='text-center'>" + courses[i].name + " - " + courses[i].level + "</h3><p><a href='course.html?id=" + courses[i].id + "&from="+lev+"' class='thumbnail'><img class='responsive' src='" + courses[i].img1 + "'</img></a></p><p class='text-center'>" + courses[i].description + "</p></div></div>"; //Occhio URL immagini da cambiare
         return (elements);
     }
 }

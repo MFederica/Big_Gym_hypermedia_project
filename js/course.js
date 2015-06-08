@@ -9,7 +9,7 @@ var instructors;
 
 function ready() {
     //recupero lista di corsi per il guided tour
-    
+
     //recupero i parametri passati con l'url
     from = getQueryVariable("from");
     id = getQueryVariable("id");
@@ -23,7 +23,7 @@ function ready() {
         crossDomain: true,
         url: "http://biggympolimi.altervista.org/php/getCourse.php",
         success: function (response) {
-            //chiamata ajax ha avuto successo allora carico tutto quello che c'è da caricare nella pagina
+            //setto le cose in comune
             console.log(JSON.parse(response));
             course = JSON.parse(response);
 
@@ -34,7 +34,7 @@ function ready() {
             $("#pannello-2 .panel-body").text(course[0].what);
             $("#pannello-3 .panel-body").text(course[0].whos);
             $("#pannello-4 .panel-body").text(course[0].why);
-            //setto le immagini per ora due
+            //setto le immagini
             $(".first-slide").attr("src", course[0].img1);
             $(".second-slide").attr("src", course[0].img2);
             $(".third-slide").attr("src", course[0].img3);
@@ -45,13 +45,16 @@ function ready() {
             for (var i = 0; i < schedule.length; i++) {
                 $('#g' + i).text(schedule[i]);
             }
-
-
-            //setto parte alta di info
+            //setto le informazioni del corso
             $("#namecourse").text(course[0].name + " - " + course[0].level);
             $("#categorycourse").text(course[0].category);
-            //cerco il corso all'interno della lista di corsi per il guided tour
-            if (from != "instr") {
+            
+            //se arrivo da instructor non carico il guided tour altrimenti si
+            if (from == "instr") {
+                $("#info").text("COURSES");
+                $("#main-container").css("margin-bottom", "70px");
+            } else {
+                storedCourses = JSON.parse(localStorage["courses"]);
                 var pn; //variabile che mi dice nell'array il corso visualizzato per poter fare +1/-1 sul guided tour
                 for (var i = 0; i < storedCourses.length; i++) {
                     if (storedCourses[i].id == id) {
@@ -59,14 +62,6 @@ function ready() {
                         break;
                     }
                 }
-            }
-
-
-            if (from == "instr") {
-                $("#info").text("COURSES");
-                $("#main-container").css("margin-bottom", "70px");
-            } else {
-                storedCourses = JSON.parse(localStorage["courses"]);
                 $("#guided").html("<nav><ul class='pager'><li><a id='prev'>Prev</a></li><li><a id='back'></a></li><li><a id='next'>Next</a></li></ul></nav>");
                 //setto next prev e turn back
                 if (pn == 0) {
@@ -81,6 +76,7 @@ function ready() {
                 } else {
                     $("#next").attr("href", "course.html?id=" + storedCourses[+pn + +1].id + "&from=" + from);
                 }
+                //setto cose in base se arrivo da allcourse o coursepercategory
                 if (from == "cat") {
                     $("#info").text(course[0].category.toUpperCase() + " COURSES");
                     $("#back").text("back to " + course[0].category);
