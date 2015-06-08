@@ -13,8 +13,6 @@ function ready() {
     //recupero i parametri passati con l'url
     from = getQueryVariable("from");
     id = getQueryVariable("id");
-    console.log("corsi da navigare " + storedCourses);
-    console.log("corso = " + id + " primo corso = " + storedCourses[0].id + " numero di corsi " + storedCourses.length + "from " + from);
     //chiamata ajax per recuperare le informazioni dal data base
     $.ajax({
         method: "POST",
