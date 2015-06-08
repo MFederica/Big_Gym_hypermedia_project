@@ -73,18 +73,14 @@ function ready() {
                     }
                 }
                 $("#row1").hide().html(el1).slideDown(2000);
-                $("#row2").hide().html(el2).slideDown(2000);
+
                 break;
             }
         case 2:
             {
                 if (courses.length <= 12) {
                     for (var i = 6; i < courses.length; i++) {
-                        if (i < 3) {
                             el1 += addElement(el1, i);
-                        } else {
-                            el2 += addElement(el2, i);
-                        }
                     }
                 } else {
                     for (var i = 6; i < 12; i++) {
@@ -92,7 +88,6 @@ function ready() {
                     }
                 }
                 $("#row1").hide().html(el1).slideDown(2000);
-                $("#row2").hide().html(el2).slideDown(2000);
                 break;
             }
         }
