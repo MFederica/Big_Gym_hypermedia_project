@@ -49,9 +49,7 @@ body {
     margin-right: 0px;
 }
 
-.course-image {
-    padding-left: 0;
-}
+
 
 #main-info {
     margin-top: 30px;
@@ -112,22 +110,13 @@ body {
         background: white;
     }
     
-    .course-image { 
-    
-       max-width: 250px;
-   
-    }
+
     
     
    }
 
 @media (max-width: 480px) {
     
-     .course-image { 
-    
-       max-width: 150px;
-     
-    }
     
      #main-container {
         margin-top: 20px;
