@@ -21,7 +21,6 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/jquery.bootpag.min.js" type="text/javascript"></script>
     <script src="js/instructor.js" type="text/javascript"></script>
-
 </head>
 
 <body>
@@ -133,20 +132,24 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-
-
-
                 </div>
-
             </div>
 
             <!--Seconda parte con biografia-->
             <div class="col-md-4" id="tweet">
-                <!--Sezione tweet-->
-                <a class="twitter-timeline" href="" data-widget-id="">Tweets</a>
+            <table class="table table-fixed" >
+            <thead>
+            <tr>
+            <th id="tweet_title"></th>    
+            </tr>    
+            </thead>
+            <tbody id="tweet_body">
+            </tbody> 
+            </table>
             </div>
+        
         </div>
-
+        
         <!--row degli awards e qualifications divisa in 2-->
         <div class="row" id="main-info">
             <div class="col-md-6" id="bio">
