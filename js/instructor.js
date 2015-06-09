@@ -33,12 +33,14 @@ function ready() {
 
             for (var i = 0; i < tweet.length; i++) {
 
-               console.log(tweet[i].text);
-
-              
+                console.log(tweet[i].text);
+                console.log(tweet[i].entities.hasOwnProperty('media'));
+                if(!tweet[i].entities.hasOwnProperty('media'))  {
                         $("#tweet_body").append("<tr><td>" + tweet[i].text + "</td></tr>")
 
-                  
+                    } else {
+                        $("#tweet_body").append("<tr><td>" + tweet[i].text + "<img class='img-responsive' src='" + tweet[i].entities.media[0].media_url + "'></td></tr>");
+                    }
 
                 }
             
@@ -175,7 +177,7 @@ function ready() {
             // Update the info div width and height - replace this with your own code
             // to do something useful!
             console.log(elem.height());
-            var tweet = $("#tweet");
+            var tweet = $("#twitter-widget-0");
 
             console.log("window:" + window.innerWidth);
             var window_widith = window.outerWidth;
@@ -185,7 +187,7 @@ function ready() {
                 tweet.attr("height", elem.height());
             } else {
 
-                tweet.attr("height", "385px");
+                tweet.attr("height", "420px");
             }
 
         });
