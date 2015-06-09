@@ -68,7 +68,7 @@ body {
 @media (max-width: 995px) {
     #tweet {
         margin-top: 30px;
-        margin-bottom: 70px;
+        margin-bottom: 10px;
         width: 70%;
     }
 }
@@ -155,4 +155,8 @@ body {
 .table-fixed tbody td, .table-fixed thead > tr> th {
   float: left;
   border-bottom-width: 0;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    border-color: #fa6900; 
 }
