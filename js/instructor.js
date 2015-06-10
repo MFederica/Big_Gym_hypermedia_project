@@ -29,17 +29,17 @@ function ready() {
             tweet = JSON.parse(response);
             console.log(tweet);
             
-             $("#tweet_title").html("Tweet di  " + tweet[0].user.name);
+             $("#tweet_title").html("Latest tweets");
 
             for (var i = 0; i < tweet.length; i++) {
 
                 console.log(tweet[i].text);
                 console.log(tweet[i].entities.hasOwnProperty('media'));
                 if(!tweet[i].entities.hasOwnProperty('media'))  {
-                        $("#tweet_body").append("<tr><td>" + tweet[i].text + "</td></tr>")
+                        $("#tweet_body").append("<tr><td><table class='table'><tbody><tr class='inner_tr'><td class='inner_td'><img class='user-image' src='"+tweet[i].user.profile_image_url+"'></img></td><td class='inner_td'>"+ tweet[i].text + "</td></tr></tbody></table></td></tr>");
 
                     } else {
-                        $("#tweet_body").append("<tr><td>" + tweet[i].text + "<img class='img-responsive' src='" + tweet[i].entities.media[0].media_url + "'></td></tr>");
+                        $("#tweet_body").append("<tr><td><table class='table'><tbody><tr class='inner_tr'><td class='inner_td'><img class='user-image' src='"+tweet[i].user.profile_image_url+"'></img></td><td class='inner_td'>"+ tweet[i].text + "</td></tr></tbody></table><img class='img-responsive' src='" + tweet[i].entities.media[0].media_url + "'></td></tr>");
                     }
 
                 }
@@ -177,17 +177,27 @@ function ready() {
             // Update the info div width and height - replace this with your own code
             // to do something useful!
             console.log(elem.height());
-            var tweet = $("#twitter-widget-0");
+            var tweet = $("#tweet");
+            var table = $("#tweet_table");
+            var body = $("#tweet_body");
 
             console.log("window:" + window.innerWidth);
             var window_widith = window.outerWidth;
 
             if (window_widith >= 995) {
-
+                
+                var height_new = elem.height() - 35;
+                
                 tweet.attr("height", elem.height());
+                table.attr("height", height_new);
+                body.attr("height", height_new);
+                
+                 
             } else {
 
                 tweet.attr("height", "420px");
+                table.attr("height", "385px");
+                body.attr("height", "385px");
             }
 
         });
