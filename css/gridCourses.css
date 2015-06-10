@@ -79,10 +79,8 @@ html {
         padding-top: 12px;
         padding-bottom: 12px;
     }
-}
-
-@media (min-width: 979px) {
-    #to-right {
+    
+        #to-right {
         border-left: 1px solid #fa6900;
         padding-left: 10px;
         -webkit-box-sizing: border-box;
