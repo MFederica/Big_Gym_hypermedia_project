@@ -1,12 +1,30 @@
-# Big_Gym_hypermedia_project
+# Big Gym hypermedia project 2015 
 
-framework:
-    bootstrap
+[Big Gym]( http://biggympolimi.altervista.org/)
 
-jquery plugin:
-    bootpag.js  pagination allcourse and coursepercategory
-    jquery.ba-resize.js  dynamic resize div
-    jssor.js home slidebar
+Technologies: 
+* HTML5
+* CSS3
+* javascript
+* Ajax
+* JSON
+* php
+
+Frameworks: 
+* [Bootstrap](http://getbootstrap.com/)
+* [Jquery](https://jquery.com/)
+
+API: 
+* [Google Maps](https://developers.google.com/maps/web/) 
+* [Twitter](https://dev.twitter.com/rest/public)
+
+jQuery:
+* [dynamic pagination](https://github.com/botmonster/jquery-bootpag)
+* [dynamic resize](https://github.com/cowboy/jquery-resize)
+* [home page slider](https://github.com/jssor/slider)
     
-php plugin:
-    twitteroauth use to load twitter json
+php:
+* [twitteroauth](https://github.com/abraham/twitteroauth)
+
+    
+Fusari Paolo - Marocco Federica    
