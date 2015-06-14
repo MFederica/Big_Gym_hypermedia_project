@@ -16,12 +16,12 @@ html {
 }
 
 #main-container {
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 /**inizio stile del paginator**/
 
@@ -91,11 +91,11 @@ html {
 
 @media (max-width: 766px) {
     #main-container {
-        margin-top: 20px;
-        margin-bottom: 0px;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding-left: 5px;
-        padding-right: 5px;
+       margin-top: 1%;
+        margin-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
     }
 }

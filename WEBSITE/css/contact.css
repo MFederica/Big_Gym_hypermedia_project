@@ -20,14 +20,14 @@ body {
         padding-left: 5px;
     }
     #canvas {
-        padding-top: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-top: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
         padding-bottom: 0;
         margin: 0;
-        margin-bottom: 10px;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-bottom: 1%;
+        margin-left: 3%;
+        margin-right: 3%;
     }
 }
 
@@ -36,13 +36,13 @@ body {
         margin-top: 20px;
     }
     #canvas {
-        padding-top: 10px;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-top: 1%;
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 0;
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-bottom: 10px;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 1%;
     }
     #map-column {
         padding-left: 10px;
@@ -69,5 +69,5 @@ body {
 }
 
 #main-container {
-    margin-top: -15px;
+    margin-top: 2%;
 }
