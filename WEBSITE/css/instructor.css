@@ -67,28 +67,6 @@ body {
     margin-top: 30px;
 }
 
-@media (min-width: 995px) {
-    #to-right {
-        border-left: 1px solid #fa6900;
-        padding-left: 35px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-}
-
-@media (max-width: 995px) {
-    #tweet {
-        margin-top: 30px;
-        margin-bottom: 0;
-        width: 80%;
-    }
-    
-    #tweet_table {
-    
-        margin-bottom: 0;
-    }
-}
 
 #qual {
     padding-left: 15px;
@@ -119,6 +97,28 @@ body {
     
 }
 
+@media (min-width: 995px) {
+    #to-right {
+        border-left: 1px solid #fa6900;
+        padding-left: 2.5%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 995px) {
+    #tweet {
+        margin-top: 5%;
+        margin-bottom: 0;
+        width: 80%;
+    }
+    
+    #tweet_table {
+    
+        margin-bottom: 0;
+    }
+}
 
 @media (max-width: 766px) {
     #main-container {
